@@ -2,14 +2,24 @@
   "name": "locomotive-mongoose",
   "version": "0.1.0",
   "description": "Mongoose datastore adapter for Locomotive.",
-  "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
+  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jaredhanson/locomotive-mongoose.git"
+    "url": "git://github.com/jaredhanson/locomotive-mongoose.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/locomotive-mongoose/issues"
   },
   "main": "./lib",
   "dependencies": {
   },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
   "engines": { "node": ">= 0.4.0" },
-  "keywords": ["locomotive", "mongoose", "mongodb", "datastore", "database", "db"]
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "keywords": ["locomotive", "mongoose", "mongodb", "db", "database", "datastore", "odm"]
 }

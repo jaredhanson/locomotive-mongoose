@@ -4,6 +4,40 @@ locomotive-mongoose is a [Locomotive](https://github.com/jaredhanson/locomotive)
 datastore adapter for applications using [Mongoose](http://mongoosejs.com/) as
 an object-document mapper (ODM).
 
+## Installation
+
+    $ npm install locomotive-mongoose
+
+## Usage
+
+#### Configure Locomotive
+
+In `config/environments/all.js`, add the following within the exported
+configuration function:
+
+    this.datastore(require('locomotive-mongoose'));
+
+#### Model Aware Helpers
+
+With Mongoose registered as a datastore, model aware helper functions can now
+accept documents from MongoDB directly as arguments:
+
+    Animal.findById(this.param('id'), function(err, animal) {
+      if (err) { return next(err); }
+      // urlFor() is model aware
+      self.url = self.urlFor(animal);
+      next();
+    });
+
+## Tests
+
+    $ npm install --dev
+    $ make test
+
+## Credits
+
+  - [Jared Hanson](http://github.com/jaredhanson)
+
 ## License
 
 (The MIT License)
