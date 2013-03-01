@@ -12,6 +12,7 @@
   },
   "main": "./lib",
   "dependencies": {
+    "mongoose": "3.x.x"
   },
   "devDependencies": {
     "vows": "0.6.x"
